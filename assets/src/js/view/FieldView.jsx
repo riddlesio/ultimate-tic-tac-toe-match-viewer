@@ -4,12 +4,13 @@
         _           = require('lodash'),
         React       = require('react'),
         createView  = require('omniscient'),
-        Cell        = require('./Cell.jsx');
+        Cell        = require('./Cell.jsx'),
+        Macroboard  = require('./Macroboard.jsx');
 
     var FieldView;
 
     FieldView = createView('FieldView', function (state) {
-        var { round, column, winner, field, fieldWidth, fieldHeight, cells } = state;
+        var { round, column, winner, field, fieldWidth, fieldHeight, cells, macroboard } = state;
         /*
         var fieldWidth = fieldWidth * field.cell.width,
             fieldHeight = fieldHeight * field.cell.height, */
@@ -21,8 +22,6 @@
         var name = "name";
         var points = "points";
         var move = "Move";
-
-
         /**
          * Data should have the following structure:
          * {
@@ -44,6 +43,9 @@
                 }} />
                 <g className="Connect4Game-grid">
                     { _.map(cells, Cell) }
+                </g>
+                <g className="Connect4Game-macroboard">
+                    { _.map(macroboard, Macroboard) }
                 </g>
                 <text
                     x={ fieldWidth / 2 }
