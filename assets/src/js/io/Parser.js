@@ -46,19 +46,26 @@
 
         parseStates: function (data, settings) {
 
-            var field                                   = settings.field,
-                macroboard                              = settings.macroboard,
-                { width, height, cellmargin, mainmargin }           = field.cell,
-                { macroboardwidth, macroboardheight }   = field.macroboard,
-                { margintop, marginleft }               = field.margins;
+            var field                                       = settings.field,
+                macroboard                                  = settings.macroboard,
+                { width, height, cellmargin, mainmargin }   = field.cell,
+                { macroboardwidth, macroboardheight }       = field.macroboard,
+                { margintop, marginleft }                   = field.margins;
             var cells = 0;
-            console.log(macroboardwidth + " " + macroboardheight);
             return _.map(data.states, function (state) {
-
 
                 var { round, column, winner, field, macroboard, illegalMove, player, player1fields, player2fields } = state;
                 if(winner) {
                     winner = settings.players.names[parseInt(winner.replace("player", "")) - 1];
+                }
+                var rounds = [];
+                for (var i = 0; i < 81; i++) {
+                    rounds[i] = "current";
+                    if (i < round) {
+                        rounds[i] = "past";
+                    } else if (i > round) {
+                        rounds[i] = "future";
+                    }
                 }
                 return {
                     round,
@@ -97,18 +104,15 @@
                     })
                     .value(),
                     rounds: _
-                    .chain(macroboard)
-                    .thru((string) => string.split(/,|;/))
-                    .map(function (cellType, index) {
-                        var row     = Math.floor(index / 3),
-                            column  = index % 3,
-                            x       = column * width * 3 + marginleft,
-                            y       = row * height * 3 + margintop;
-                        var mbwidth = width * 2;
-                        var mbheight = height * 2;
+                    .chain(rounds)
+                    .map(function (type, index) {
+                        var row     = Math.floor(index / 9),
+                            column  = index % 9,
+                            x       = column * 35,
+                            y       = row * 35;
                         var mbplayer = player;
 
-                        return { row, column, x, y, mbwidth, mbheight, cellType, marginleft, margintop, mbplayer };
+                        return { row, column, x, y, width, height, type, marginleft, margintop, index };
                     })
                     .value()
                 };

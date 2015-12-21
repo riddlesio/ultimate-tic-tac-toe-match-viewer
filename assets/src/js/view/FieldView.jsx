@@ -5,12 +5,13 @@
         React       = require('react'),
         createView  = require('omniscient'),
         Cell        = require('./Cell.jsx'),
+        Round        = require('./Round.jsx'),
         Macroboard  = require('./Macroboard.jsx');
 
     var FieldView;
 
     FieldView = createView('FieldView', function (state) {
-        var { round, column, winner, field, fieldWidth, fieldHeight, cells, macroboard } = state;
+        var { round, column, winner, field, fieldWidth, fieldHeight, cells, rounds, macroboard } = state;
         /*
         var fieldWidth = fieldWidth * field.cell.width,
             fieldHeight = fieldHeight * field.cell.height, */
@@ -46,6 +47,9 @@
                 </g>
                 <g className="Connect4Game-grid">
                     { _.map(cells, Cell) }
+                </g>
+                <g className="Connect4Game-rounds">
+                    { _.map(rounds, Round) }
                 </g>
                 <text
                     x={ fieldWidth / 2 }

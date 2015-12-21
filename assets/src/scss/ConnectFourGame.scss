@@ -121,3 +121,20 @@ html {
     transform: translateY(150px);
   }
 }
+
+.round-future, .round-past, .round-current {
+	fill: #1b60c9;
+	font-family: Montserrat;
+	font-size: 1.2rem;
+	text-anchor: middle;
+}
+
+.round-current {
+	fill: #1f2225;
+}
+.round-past {
+	fill: #fec278;
+}
+.round-future {
+	fill: #8a8a8a;
+}

@@ -11,7 +11,7 @@
 
     GameView = createView('GameView', function (props) {
         var { state, settings } = props,
-            { round, column, winner, field, fieldWidth, fieldHeight, player1fields, player2fields, cells, illegalMove } = state,
+            { round, column, winner, field, fieldWidth, fieldHeight, player1fields, player2fields, cells, illegalMove, rounds } = state,
             { players, field } = settings,
             cell = field.cell;
         var player1class="", player2class="";
@@ -53,6 +53,15 @@
                     }} />
                     <symbol id="block-2" dangerouslySetInnerHTML={{
                         __html: `<image width="${ cell.width }" height="${ cell.height }" xlink:href="./img/block-2.svg" />`
+                    }} />
+                    <symbol id="round-past" dangerouslySetInnerHTML={{
+                        __html: `<image width="30" height="30" xlink:href="./img/round-past.svg" />`
+                    }} />
+                    <symbol id="round-future" dangerouslySetInnerHTML={{
+                        __html: `<image width="30" height="30" xlink:href="./img/round-future.svg" />`
+                    }} />
+                    <symbol id="round-current" dangerouslySetInnerHTML={{
+                        __html: `<image width="30" height="30" xlink:href="./img/round-current.svg" />`
                     }} />
                     <symbol id="connect4-background" dangerouslySetInnerHTML={{
                         __html: `<image width="${ 1100 }" height="${ 500 }" xlink:href="./img/gamefield.svg" />`
