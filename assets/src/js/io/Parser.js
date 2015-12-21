@@ -46,13 +46,13 @@
 
         parseStates: function (data, settings) {
 
-            var field                       = settings.field,
-                macroboard                  = settings.macroboard,
-                fieldWidth                  = field.width,
-                fieldHeight                 = field.height,
-                { width, height }           = field.cell,
-                { marginleft, margintop }   = field.margins;
+            var field                                   = settings.field,
+                macroboard                              = settings.macroboard,
+                { width, height, cellmargin, mainmargin }           = field.cell,
+                { macroboardwidth, macroboardheight }   = field.macroboard,
+                { margintop, marginleft }               = field.margins;
             var cells = 0;
+            console.log(macroboardwidth + " " + macroboardheight);
             return _.map(data.states, function (state) {
 
 
@@ -65,8 +65,6 @@
                     column,
                     winner,
                     field,
-                    fieldWidth,
-                    fieldHeight,
                     illegalMove,
                     player1fields,
                     player2fields,
@@ -75,10 +73,10 @@
                         .chain(field)
                         .thru((string) => string.split(/,|;/))
                         .map(function (cellType, index) {
-                            var row     = Math.floor(index / fieldWidth),
-                                column  = index % fieldWidth,
-                                x       = column * width+marginleft,
-                                y       = row * height+margintop+2;
+                            var row     = Math.floor(index / 9),
+                                column  = index % 9,
+                                x       = column * width + marginleft+mainmargin+Math.floor(column/3) * cellmargin,
+                                y       = row * height + margintop+mainmargin+Math.floor(row/3) * cellmargin;
 
                             return { row, column, x, y, width, height, cellType, marginleft, margintop };
                         })
@@ -89,10 +87,25 @@
                     .map(function (cellType, index) {
                         var row     = Math.floor(index / 3),
                             column  = index % 3,
-                            x       = column * (width*3)+marginleft,
-                            y       = row * (height*3)+margintop;
-                        var mbwidth = width *3;
-                        var mbheight = height * 3;
+                            x       = macroboardwidth * row + marginleft,
+                            y       = macroboardheight * column + margintop;
+                        var mbwidth = macroboardwidth;
+                        var mbheight = macroboardheight;
+                        var mbplayer = player;
+
+                        return { row, column, x, y, mbwidth, mbheight, cellType, marginleft, margintop, mbplayer };
+                    })
+                    .value(),
+                    rounds: _
+                    .chain(macroboard)
+                    .thru((string) => string.split(/,|;/))
+                    .map(function (cellType, index) {
+                        var row     = Math.floor(index / 3),
+                            column  = index % 3,
+                            x       = column * width * 3 + marginleft,
+                            y       = row * height * 3 + margintop;
+                        var mbwidth = width * 2;
+                        var mbheight = height * 2;
                         var mbplayer = player;
 
                         return { row, column, x, y, mbwidth, mbheight, cellType, marginleft, margintop, mbplayer };

@@ -41,11 +41,11 @@
                 <g dangerouslySetInnerHTML={{
                     __html: `<use x="50" y="135" xlink:href="#connect4-background" />`
                 }} />
-                <g className="Connect4Game-grid">
-                    { _.map(cells, Cell) }
-                </g>
                 <g className="Connect4Game-macroboard">
                     { _.map(macroboard, Macroboard) }
+                </g>
+                <g className="Connect4Game-grid">
+                    { _.map(cells, Cell) }
                 </g>
                 <text
                     x={ fieldWidth / 2 }
