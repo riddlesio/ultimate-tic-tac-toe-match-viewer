@@ -15,10 +15,10 @@
         /*
         var fieldWidth = fieldWidth * field.cell.width,
             fieldHeight = fieldHeight * field.cell.height, */
-        var moveClass = "Connect4Game-playerInfo Connect4Game-playerMove";
+        var moveClass = "TicTacToeGame-playerInfo TicTacToeGame-playerMove";
 
         // if (!_.includes(MoveType, move)) {
-        //     moveClass += " Connect4Game-playerMove-illegal";
+        //     moveClass += " TicTacToeGame-playerMove-illegal";
         // }
         var name = "name";
         var points = "points";
@@ -36,25 +36,26 @@
          */
         return <g
             key="key"
-            className="Connect4Game-playerView" >
-                <rect className="Connect4Game-playerName-background" x="-2" y="-77" width={ fieldWidth + 4 } height="73" />
+            className="TicTacToeGame-playerView" >
+                <rect className="TicTacToeGame-playerName-background" x="-2" y="-77" width={ fieldWidth + 4 } height="73" />
 
                 <g dangerouslySetInnerHTML={{
                     __html: `<use x="50" y="135" xlink:href="#connect4-background" />`
                 }} />
-                <g className="Connect4Game-macroboard">
+                <g className="TicTacToeGame-macroboard">
                     { _.map(macroboard, Macroboard) }
                 </g>
-                <g className="Connect4Game-grid">
+                <g className="TicTacToeGame-grid">
                     { _.map(cells, Cell) }
                 </g>
-                <g className="Connect4Game-rounds">
+                <text x="60" y="234" className="TicTacToeGame-rounds">Rounds</text>
+                <g className="TicTacToeGame-rounds">
                     { _.map(rounds, Round) }
                 </g>
                 <text
                     x={ fieldWidth / 2 }
                     y="-30"
-                    className="Connect4Game-playerInfo Connect4Game-playerName">{ name }</text>
+                    className="TicTacToeGame-playerInfo TicTacToeGame-playerName">{ name }</text>
             </g>;
     });
 

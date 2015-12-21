@@ -108,8 +108,8 @@
                     .map(function (type, index) {
                         var row     = Math.floor(index / 9),
                             column  = index % 9,
-                            x       = column * 35,
-                            y       = row * 35;
+                            x       = column * 35 + 60,
+                            y       = row * 35 + 250;
                         var mbplayer = player;
 
                         return { row, column, x, y, width, height, type, marginleft, margintop, index };

@@ -22,7 +22,7 @@
         }
 
         return (
-            <svg className="Connect4Game" viewBox="0 0 1200 705" preserveAspectRatio="xMidYMid meet">
+            <svg className="TicTacToeGame" viewBox="0 0 1200 705" preserveAspectRatio="xMidYMid meet">
                 <defs>
                     <symbol id="background-playername-red" dangerouslySetInnerHTML={{
                         __html: `<image width="328" height="71" xlink:href="./img/background-playername-red.svg" />`
@@ -78,18 +78,18 @@
                 <text
                     x={ "210" }
                     y={ "150" }
-                    className={"Connect4Game-playerName Connect4Game-player1Name " + player1class }>{ players.names[0] }</text>
+                    className={"TicTacToeGame-playerName TicTacToeGame-player1Name " + player1class }>{ players.names[0] }</text>
                 <text
                     x={ "983" }
                     y={ "150" }
-                    className={"Connect4Game-playerName Connect4Game-player2Name " + player2class }>{ players.names[1] }</text>
+                    className={"TicTacToeGame-playerName TicTacToeGame-player2Name " + player2class }>{ players.names[1] }</text>
 
-                <text x="300" y="100" className="Connect4Game-playerFields Connect4Game-player1Fields">{ player1fields }</text>
-                <text x="1034" y="100" className="Connect4Game-playerFields Connect4Game-player2Fields">{ player2fields }</text>
+                <text x="300" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player1Fields">{ player1fields }</text>
+                <text x="1034" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player2Fields">{ player2fields }</text>
 
 
-                <text x="50%" y="70" className="Connect4Game-currentRound">{ 'Move ' + round }</text>
-                <text x="50%" y="110" className="Connect4Game-illegalMove">{ illegalMove }</text>
+                <text x="50%" y="70" className="TicTacToeGame-currentRound">{ 'Move ' + round }</text>
+                <text x="50%" y="110" className="TicTacToeGame-illegalMove">{ illegalMove }</text>
 
                 <Overlay winner={ winner } />
 
