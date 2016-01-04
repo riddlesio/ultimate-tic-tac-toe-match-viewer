@@ -34,6 +34,7 @@
          *     settings: Object
          * }
          */
+        console.log(macroboard);
         return <g
             key="key"
             className="TicTacToeGame-playerView" >

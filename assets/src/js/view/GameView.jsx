@@ -30,13 +30,19 @@
                     <symbol id="background-playername-yellow" dangerouslySetInnerHTML={{
                         __html: `<image width="328" height="71" xlink:href="./img/background-playername-yellow.svg" />`
                     }} />
-                    <symbol id="macroboard--1" dangerouslySetInnerHTML={{
+                    <symbol id="macroboard-active-1" dangerouslySetInnerHTML={{
                         __html: `<image width="165" height="165" xlink:href="./img/fieldactiveplayer1.svg" />`
                     }} />
-                    <symbol id="macroboard--2" dangerouslySetInnerHTML={{
+                    <symbol id="macroboard-active-2" dangerouslySetInnerHTML={{
                         __html: `<image width="165" height="165" xlink:href="./img/fieldactiveplayer2.svg" />`
                     }} />
-                    <symbol id="macroboard--0" dangerouslySetInnerHTML={{
+                    <symbol id="macroboard-taken-1" dangerouslySetInnerHTML={{
+                        __html: `<image width="165" height="165" xlink:href="./img/fieldtakenplayer1.svg" />`
+                    }} />
+                    <symbol id="macroboard-taken-2" dangerouslySetInnerHTML={{
+                        __html: `<image width="165" height="165" xlink:href="./img/fieldtakenplayer2.svg" />`
+                    }} />
+                    <symbol id="macroboard-0" dangerouslySetInnerHTML={{
                         __html: `<image width="165" height="165" xlink:href="./img/field.svg" />`
                     }} />
                     <symbol id="macroboard-1" dangerouslySetInnerHTML={{
@@ -88,7 +94,6 @@
                 <text x="1034" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player2Fields">{ player2fields }</text>
 
 
-                <text x="50%" y="70" className="TicTacToeGame-currentRound">{ 'Move ' + round }</text>
                 <text x="50%" y="110" className="TicTacToeGame-illegalMove">{ illegalMove }</text>
 
                 <Overlay winner={ winner } />

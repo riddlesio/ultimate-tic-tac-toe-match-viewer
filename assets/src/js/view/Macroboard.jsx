@@ -23,23 +23,22 @@
         var className,
             { x, y, mbwidth, mbheight, cellType, mbplayer } = data;
 
-            className = 0;
-            if (cellType == -1) {
-                className = mbplayer;
-            }
-        /*
-        var player1class="", player2class="";
-        if ( data.player == 1) {
-            player1class = " active ";
-        } else {
-            player2class = " active ";
+        className = 0;
+        if (cellType == -1) {
+            className = "active-" + mbplayer;
         }
-        */
+        if (cellType == 1) {
+            className = "taken-1";
+        }
+        if (cellType == 2) {
+            className = "taken-2";
+        }
+        
         var id="x" + x + "y" + y;
 
         return (
              <g id={ id } dangerouslySetInnerHTML={{
-                 __html: `<use x="${ x }" y="${ y }" width="${ mbwidth }" height="${ mbheight }" xlink:href="#macroboard--${ className }" />`
+                 __html: `<use x="${ x }" y="${ y }" width="${ mbwidth }" height="${ mbheight }" xlink:href="#macroboard-${ className }" />`
              }} />
          );
     });
