@@ -25,21 +25,13 @@
                 <g className="TicTacToeGame-grid">
                     { _.map(cells, Cell) }
                 </g>
-                <text x="60" y="234" className="TicTacToeGame-rounds">Rounds</text>
+                <text x="130" y="284" className="TicTacToeGame-rounds">Rounds</text>
                 <g className="TicTacToeGame-rounds">
                     { _.map(rounds, Round) }
                 </g>
 
             </g>;
     });
-
-    function createTransform (index, fieldWidth, canvas) {
-
-        var x = 200 + index * (canvas.width - 400 - fieldWidth),
-            y = 100;
-
-        return `translate(${x}, ${y})`;
-    }
 
     module.exports = FieldView;
 }());

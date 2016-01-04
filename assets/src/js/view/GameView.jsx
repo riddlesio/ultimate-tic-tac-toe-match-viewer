@@ -63,22 +63,30 @@
                     <symbol id="TicTacToeGame-background" dangerouslySetInnerHTML={{
                         __html: `<image width="1100" height="500" xlink:href="./img/gamefield.svg" />`
                     }} />
-                </defs>
-                { FieldView(state) }
-                <g dangerouslySetInnerHTML={{
-                    __html: `<use x="60" y="53" xlink:href="#background-playername-red" />`
-                }} />
-                <g dangerouslySetInnerHTML={{
-                    __html: `<use x="260" y="53" xlink:href="#background-playername-yellow" />`
-                }} />
 
+                    <symbol id="TicTacToeGame-avatar1" dangerouslySetInnerHTML={{
+                        __html: `<image width="100" height="100" xlink:href="./img/avatar1.jpg" />`
+                    }} />
+                    <symbol id="TicTacToeGame-avatar2" dangerouslySetInnerHTML={{
+                        __html: `<image width="100" height="100" xlink:href="./img/avatar2.jpg" />`
+                    }} />
+                </defs>
+
+                { FieldView(state) }
+
+                <g dangerouslySetInnerHTML={{
+                    __html: `<use x="100" y="60" rx="0.1" ry="0.1" xlink:href="#TicTacToeGame-avatar1" />`
+                }} />
+                <g dangerouslySetInnerHTML={{
+                    __html: `<use x="360" y="60" xlink:href="#TicTacToeGame-avatar2" />`
+                }} />
                 <text
-                    x={ "60" }
-                    y={ "150" }
+                    x={ "150" }
+                    y={ "200" }
                     className={"TicTacToeGame-playerName TicTacToeGame-player1Name " + player1class }>{ players.names[0] }</text>
                 <text
-                    x={ "260" }
-                    y={ "150" }
+                    x={ "410" }
+                    y={ "200" }
                     className={"TicTacToeGame-playerName TicTacToeGame-player2Name " + player2class }>{ players.names[1] }</text>
 
                 <text x="300" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player1Fields u-hidden">{ player1fields }</text>
@@ -94,3 +102,4 @@
 
     module.exports = GameView;
 }());
+
