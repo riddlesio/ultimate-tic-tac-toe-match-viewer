@@ -69,29 +69,29 @@
                     <symbol id="round-current" dangerouslySetInnerHTML={{
                         __html: `<image width="30" height="30" xlink:href="./img/round-current.svg" />`
                     }} />
-                    <symbol id="connect4-background" dangerouslySetInnerHTML={{
-                        __html: `<image width="${ 1100 }" height="${ 500 }" xlink:href="./img/gamefield.svg" />`
+                    <symbol id="TicTacToeGame-background" dangerouslySetInnerHTML={{
+                        __html: `<image width="1100" height="500" xlink:href="./img/gamefield.svg" />`
                     }} />
                 </defs>
                 { FieldView(state) }
                 <g dangerouslySetInnerHTML={{
-                    __html: `<use x="70" y="53" xlink:href="#background-playername-red" />`
+                    __html: `<use x="60" y="53" xlink:href="#background-playername-red" />`
                 }} />
                 <g dangerouslySetInnerHTML={{
-                    __html: `<use x="800" y="53" xlink:href="#background-playername-yellow" />`
+                    __html: `<use x="260" y="53" xlink:href="#background-playername-yellow" />`
                 }} />
 
                 <text
-                    x={ "210" }
+                    x={ "60" }
                     y={ "150" }
                     className={"TicTacToeGame-playerName TicTacToeGame-player1Name " + player1class }>{ players.names[0] }</text>
                 <text
-                    x={ "983" }
+                    x={ "260" }
                     y={ "150" }
                     className={"TicTacToeGame-playerName TicTacToeGame-player2Name " + player2class }>{ players.names[1] }</text>
 
-                <text x="300" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player1Fields">{ player1fields }</text>
-                <text x="1034" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player2Fields">{ player2fields }</text>
+                //<text x="300" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player1Fields">{ player1fields }</text>
+                //<text x="1034" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player2Fields">{ player2fields }</text>
 
 
                 <text x="50%" y="110" className="TicTacToeGame-illegalMove">{ illegalMove }</text>

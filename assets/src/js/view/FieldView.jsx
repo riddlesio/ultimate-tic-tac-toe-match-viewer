@@ -34,14 +34,11 @@
          *     settings: Object
          * }
          */
-        console.log(macroboard);
         return <g
             key="key"
             className="TicTacToeGame-playerView" >
-                <rect className="TicTacToeGame-playerName-background" x="-2" y="-77" width={ fieldWidth + 4 } height="73" />
-
                 <g dangerouslySetInnerHTML={{
-                    __html: `<use x="50" y="135" xlink:href="#connect4-background" />`
+                    __html: `<use x="50" y="135" xlink:href="#TicTacToeGame-background" />`
                 }} />
                 <g className="TicTacToeGame-macroboard">
                     { _.map(macroboard, Macroboard) }
@@ -53,10 +50,7 @@
                 <g className="TicTacToeGame-rounds">
                     { _.map(rounds, Round) }
                 </g>
-                <text
-                    x={ fieldWidth / 2 }
-                    y="-30"
-                    className="TicTacToeGame-playerInfo TicTacToeGame-playerName">{ name }</text>
+
             </g>;
     });
 

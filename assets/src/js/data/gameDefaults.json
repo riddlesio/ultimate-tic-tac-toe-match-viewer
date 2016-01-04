@@ -13,18 +13,18 @@ _defaults = {
     },
     "field": {
         "cell": {
-            "width": 44,
-            "height": 44,
+            "width": 55,
+            "height": 55,
             "cellmargin": 18,
-            "mainmargin": 12
+            "mainmargin": 0 /* margin added left and top */
         },
         "macroboard": {
-            "macroboardwidth": 150,
-            "macroboardheight": 150
+            "macroboardwidth": 195,
+            "macroboardheight": 195
         },
         "margins": {
-            "marginleft": 550,
-            "margintop": 144
+            "marginleft": 500,
+            "margintop": 60
         }
     },
     "boxHeight": 630,

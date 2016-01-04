@@ -14,7 +14,7 @@
    inkscape:version="0.48.4 r9939"
    width="100%"
    height="100%"
-   sodipodi:docname="red_selected.svg">
+   sodipodi:docname="fieldactiveplayer1.svg">
   <metadata
      id="metadata136">
     <rdf:RDF>
@@ -40,8 +40,8 @@
      id="namedview134"
      showgrid="false"
      inkscape:zoom="1.2421053"
-     inkscape:cx="95"
-     inkscape:cy="95"
+     inkscape:cx="95.000003"
+     inkscape:cy="95.000003"
      inkscape:window-x="974"
      inkscape:window-y="147"
      inkscape:window-maximized="0"
@@ -212,8 +212,7 @@
      id="title57">red_selected</title>
   <g
      class="cls-1"
-     id="g59"
-     transform="matrix(0.78813684,0,0,0.78813684,15.498,15.498)">
+     id="g59">
     <g
        id="win_selected">
       <rect
