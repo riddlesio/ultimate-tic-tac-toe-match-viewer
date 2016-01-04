@@ -30,35 +30,26 @@
                     <symbol id="background-playername-yellow" dangerouslySetInnerHTML={{
                         __html: `<image width="328" height="71" xlink:href="./img/background-playername-yellow.svg" />`
                     }} />
-                    <symbol id="macroboard-active-1" dangerouslySetInnerHTML={{
-                        __html: `<image width="165" height="165" xlink:href="./img/fieldactiveplayer1.svg" />`
+                    <symbol id="TicTacToeGame-cell-player1" dangerouslySetInnerHTML={{
+                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cell-player1.svg" />`
                     }} />
-                    <symbol id="macroboard-active-2" dangerouslySetInnerHTML={{
-                        __html: `<image width="165" height="165" xlink:href="./img/fieldactiveplayer2.svg" />`
+                    <symbol id="TicTacToeGame-cell-player2" dangerouslySetInnerHTML={{
+                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cell-player2.svg" />`
                     }} />
-                    <symbol id="macroboard-taken-1" dangerouslySetInnerHTML={{
-                        __html: `<image width="165" height="165" xlink:href="./img/fieldtakenplayer1.svg" />`
+                    <symbol id="TicTacToeGame-cellbackground-active0-taken0" dangerouslySetInnerHTML={{
+                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active0-taken0.svg" />`
                     }} />
-                    <symbol id="macroboard-taken-2" dangerouslySetInnerHTML={{
-                        __html: `<image width="165" height="165" xlink:href="./img/fieldtakenplayer2.svg" />`
+                    <symbol id="TicTacToeGame-cellbackground-active1-taken0" dangerouslySetInnerHTML={{
+                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active1-taken0.svg" />`
                     }} />
-                    <symbol id="macroboard-0" dangerouslySetInnerHTML={{
-                        __html: `<image width="165" height="165" xlink:href="./img/field.svg" />`
+                    <symbol id="TicTacToeGame-cellbackground-active2-taken0" dangerouslySetInnerHTML={{
+                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active2-taken0.svg" />`
                     }} />
-                    <symbol id="macroboard-1" dangerouslySetInnerHTML={{
-                        __html: `<image width="165" height="165" xlink:href="./img/fieldoccupied1.svg" />`
+                    <symbol id="TicTacToeGame-cellbackground-active0-taken1" dangerouslySetInnerHTML={{
+                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active0-taken1.svg" />`
                     }} />
-                    <symbol id="macroboard-2" dangerouslySetInnerHTML={{
-                        __html: `<image width="165" height="165" xlink:href="./img/fieldoccupied2.svg" />`
-                    }} />
-                    <symbol id="block-0" dangerouslySetInnerHTML={{
-                        __html: `<image width="${ cell.width }" height="${ cell.height }" xlink:href="./img/block-0.svg" />`
-                    }} />
-                    <symbol id="block-1" dangerouslySetInnerHTML={{
-                        __html: `<image width="${ cell.width }" height="${ cell.height }" xlink:href="./img/block-1.svg" />`
-                    }} />
-                    <symbol id="block-2" dangerouslySetInnerHTML={{
-                        __html: `<image width="${ cell.width }" height="${ cell.height }" xlink:href="./img/block-2.svg" />`
+                    <symbol id="TicTacToeGame-cellbackground-active0-taken2" dangerouslySetInnerHTML={{
+                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active0-taken2.svg" />`
                     }} />
                     <symbol id="round-past" dangerouslySetInnerHTML={{
                         __html: `<image width="30" height="30" xlink:href="./img/round-past.svg" />`

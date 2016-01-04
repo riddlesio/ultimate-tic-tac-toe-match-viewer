@@ -15,16 +15,11 @@ _defaults = {
         "cell": {
             "width": 55,
             "height": 55,
-            "cellmargin": 18,
-            "mainmargin": 0 /* margin added left and top */
-        },
-        "macroboard": {
-            "macroboardwidth": 195,
-            "macroboardheight": 195
+            "cellmargin": 18
         },
         "margins": {
-            "marginleft": 500,
-            "margintop": 60
+            "marginleft": 550,
+            "margintop": 10
         }
     },
     "boxHeight": 630,

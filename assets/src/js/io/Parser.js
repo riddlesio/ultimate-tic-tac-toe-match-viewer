@@ -35,7 +35,6 @@
                     }
 
                     currentRound = round;
-                    console.log( "currentRound " + currentRound); 
                     label = `Round ${round}`;
 
                     return { label, value: index };
@@ -48,13 +47,12 @@
 
             var field                                       = settings.field,
                 macroboard                                  = settings.macroboard,
-                { width, height, cellmargin, mainmargin }   = field.cell,
-                { macroboardwidth, macroboardheight }       = field.macroboard,
+                { width, height, cellmargin }               = field.cell,
                 { margintop, marginleft }                   = field.margins;
             var cells = 0;
             return _.map(data.states, function (state) {
 
-                var { round, column, winner, field, macroboard, illegalMove, player, player1fields, player2fields } = state;
+                var { round, column, winner, field, illegalMove, player, player1fields, player2fields } = state;
                 if(winner) {
                     winner = settings.players.names[parseInt(winner.replace("player", "")) - 1];
                 }
@@ -80,29 +78,22 @@
                         .chain(field)
                         .thru((string) => string.split(/,|;/))
                         .map(function (cellType, index) {
+                            var player = 0;
+                            if (cellType & 1) player = 1;
+                            if (cellType & 2) player = 2;
+                            var active = 0;
+                            if (cellType & 4) active = 1;
+                            if (cellType & 8) active = 2;
+                            var taken = 0;
+                            if (cellType & 16) taken = 1;
+                            if (cellType & 32) taken = 2;
                             var row     = Math.floor(index / 9),
                                 column  = index % 9,
-                                x       = column * width + marginleft + mainmargin + Math.floor(column/3) * cellmargin,
-                                y       = row * height + margintop + mainmargin + Math.floor(row/3) * cellmargin;
-
-                            return { row, column, x, y, width, height, cellType, marginleft, margintop };
+                                x       = column * width + marginleft + Math.floor(column/3) * cellmargin,
+                                y       = row * height + margintop + Math.floor(row/3) * cellmargin;
+                            return { row, column, x, y, width, height, player, active, taken };
                         })
                         .value(),
-                    macroboard: _
-                    .chain(macroboard)
-                    .thru((string) => string.split(/,|;/))
-                    .map(function (cellType, index) {
-                        var row     = Math.floor(index / 3),
-                            column  = index % 3,
-                            x       = macroboardheight * column + marginleft,
-                            y       = macroboardwidth * row + margintop;
-                        var mbwidth = macroboardwidth;
-                        var mbheight = macroboardheight;
-                        var mbplayer = player;
-
-                        return { row, column, x, y, mbwidth, mbheight, cellType, marginleft, margintop, mbplayer };
-                    })
-                    .value(),
                     rounds: _
                     .chain(rounds)
                     .map(function (type, index) {
