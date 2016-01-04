@@ -5,24 +5,24 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   id="dark"
    viewBox="0 0 190 190"
+   id="svg2993"
    version="1.1"
    inkscape:version="0.48.4 r9939"
    width="100%"
    height="100%"
-   sodipodi:docname="field.svg">
+   sodipodi:docname="fieldactiveplayer2.svg">
   <metadata
-     id="metadata29">
+     id="metadata3127">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>field</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -35,117 +35,448 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
-     id="namedview27"
+     inkscape:window-width="1126"
+     inkscape:window-height="688"
+     id="namedview3125"
      showgrid="false"
-     inkscape:zoom="2.4842105"
-     inkscape:cx="-42.186384"
-     inkscape:cy="89.244618"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="dark" />
+     inkscape:zoom="1.2421053"
+     inkscape:cx="2.0127119"
+     inkscape:cy="95"
+     inkscape:window-x="574"
+     inkscape:window-y="78"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2993" />
   <defs
-     id="defs3">
+     id="defs2995">
     <style
-       id="style5">.cls-1{fill:#1f2225;}</style>
+       id="style2997">.cls-1{isolation:isolate;}.cls-2{fill:#1f2225;}.cls-3{mask:url(#mask);}.cls-4{mix-blend-mode:screen;}.cls-5{fill:#6aa2fe;}.cls-6{mask:url(#mask-2);}.cls-7{mask:url(#mask-3);}.cls-8{mask:url(#mask-4);}.cls-9{mask:url(#mask-5);}.cls-10{mask:url(#mask-6);}.cls-11{mask:url(#mask-7);}.cls-12{mask:url(#mask-8);}.cls-13{mask:url(#mask-9);}.cls-14{filter:url(#luminosity-invert);}</style>
+    <filter
+       id="luminosity-invert"
+       filterUnits="userSpaceOnUse"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"
+         id="feColorMatrix3000" />
+    </filter>
+    <mask
+       id="mask"
+       x="-2"
+       y="-2"
+       width="64"
+       height="64"
+       maskUnits="userSpaceOnUse">
+      <g
+         class="cls-14"
+         id="g3003">
+        <use
+           transform="translate(-2 -2)"
+           xlink:href="#image"
+           id="use3005" />
+      </g>
+    </mask>
+    <image
+       id="image"
+       width="64"
+       height="64"
+       xlink:href="data:image/png;base64,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" />
+    <mask
+       id="mask-2"
+       x="63"
+       y="-2"
+       width="64"
+       height="64"
+       maskUnits="userSpaceOnUse">
+      <g
+         class="cls-14"
+         id="g3009">
+        <use
+           transform="translate(63 -2)"
+           xlink:href="#image"
+           id="use3011" />
+      </g>
+    </mask>
+    <mask
+       id="mask-3"
+       x="128"
+       y="-2"
+       width="64"
+       height="64"
+       maskUnits="userSpaceOnUse">
+      <g
+         class="cls-14"
+         id="g3014">
+        <use
+           transform="translate(128 -2)"
+           xlink:href="#image"
+           id="use3016" />
+      </g>
+    </mask>
+    <mask
+       id="mask-4"
+       x="-2"
+       y="63"
+       width="64"
+       height="64"
+       maskUnits="userSpaceOnUse">
+      <g
+         class="cls-14"
+         id="g3019">
+        <use
+           transform="translate(-2 63)"
+           xlink:href="#image"
+           id="use3021" />
+      </g>
+    </mask>
+    <mask
+       id="mask-5"
+       x="63"
+       y="63"
+       width="64"
+       height="64"
+       maskUnits="userSpaceOnUse">
+      <g
+         class="cls-14"
+         id="g3024">
+        <use
+           transform="translate(63 63)"
+           xlink:href="#image"
+           id="use3026" />
+      </g>
+    </mask>
+    <mask
+       id="mask-6"
+       x="128"
+       y="63"
+       width="64"
+       height="64"
+       maskUnits="userSpaceOnUse">
+      <g
+         class="cls-14"
+         id="g3029">
+        <use
+           transform="translate(128 63)"
+           xlink:href="#image"
+           id="use3031" />
+      </g>
+    </mask>
+    <mask
+       id="mask-7"
+       x="-2"
+       y="128"
+       width="64"
+       height="64"
+       maskUnits="userSpaceOnUse">
+      <g
+         class="cls-14"
+         id="g3034">
+        <use
+           transform="translate(-2 128)"
+           xlink:href="#image"
+           id="use3036" />
+      </g>
+    </mask>
+    <mask
+       id="mask-8"
+       x="63"
+       y="128"
+       width="64"
+       height="64"
+       maskUnits="userSpaceOnUse">
+      <g
+         class="cls-14"
+         id="g3039">
+        <use
+           transform="translate(63 128)"
+           xlink:href="#image"
+           id="use3041" />
+      </g>
+    </mask>
+    <mask
+       id="mask-9"
+       x="128"
+       y="128"
+       width="64"
+       height="64"
+       maskUnits="userSpaceOnUse">
+      <g
+         class="cls-14"
+         id="g3044">
+        <use
+           transform="translate(128 128)"
+           xlink:href="#image"
+           id="use3046" />
+      </g>
+    </mask>
   </defs>
   <title
-     id="title7">field</title>
+     id="title3048">blue_selected</title>
   <g
-     id="g3006"
-     transform="matrix(0.78813558,0,0,0.78813558,15.497882,15.497882)"
-     style="fill:#4268a6;fill-opacity:1">
-    <rect
-       id="rect9"
-       ry="10"
-       rx="10"
-       height="60"
-       width="60"
-       class="cls-1"
-       x="0"
-       y="0"
-       style="fill:#4268a6;fill-opacity:1" />
-    <rect
-       id="rect11"
-       ry="10"
-       rx="10"
-       height="60"
-       width="60"
-       x="65"
-       class="cls-1"
-       y="0"
-       style="fill:#4268a6;fill-opacity:1" />
-    <rect
-       id="rect13"
-       ry="10"
-       rx="10"
-       height="60"
-       width="60"
-       x="130"
-       class="cls-1"
-       y="0"
-       style="fill:#4268a6;fill-opacity:1" />
-    <rect
-       id="rect15"
-       ry="10"
-       rx="10"
-       height="60"
-       width="60"
-       y="65"
-       class="cls-1"
-       x="0"
-       style="fill:#4268a6;fill-opacity:1" />
-    <rect
-       id="rect17"
-       ry="10"
-       rx="10"
-       height="60"
-       width="60"
-       y="65"
-       x="65"
-       class="cls-1"
-       style="fill:#4268a6;fill-opacity:1" />
-    <rect
-       id="rect19"
-       ry="10"
-       rx="10"
-       height="60"
-       width="60"
-       y="65"
-       x="130"
-       class="cls-1"
-       style="fill:#4268a6;fill-opacity:1" />
-    <rect
-       id="rect21"
-       ry="10"
-       rx="10"
-       height="60"
-       width="60"
-       y="130"
-       class="cls-1"
-       x="0"
-       style="fill:#4268a6;fill-opacity:1" />
-    <rect
-       id="rect23"
-       ry="10"
-       rx="10"
-       height="60"
-       width="60"
-       y="130"
-       x="65"
-       class="cls-1"
-       style="fill:#4268a6;fill-opacity:1" />
-    <rect
-       id="rect25"
-       ry="10"
-       rx="10"
-       height="60"
-       width="60"
-       y="130"
-       x="130"
-       class="cls-1"
-       style="fill:#4268a6;fill-opacity:1" />
+     class="cls-1"
+     id="g3050"
+     transform="matrix(0.78813684,0,0,0.78813684,15.498,15.498)">
+    <g
+       id="blue_sekected">
+      <rect
+         class="cls-2"
+         width="60"
+         height="60"
+         rx="10"
+         ry="10"
+         id="rect3053"
+         x="0"
+         y="0"
+         style="fill:#1f2225" />
+      <g
+         class="cls-3"
+         id="g3055"
+         mask="url(#mask)">
+        <g
+           class="cls-4"
+           id="g3057">
+          <rect
+             class="cls-5"
+             width="60"
+             height="60"
+             rx="10"
+             ry="10"
+             id="rect3059"
+             x="0"
+             y="0"
+             style="fill:#6aa2fe" />
+        </g>
+      </g>
+      <rect
+         class="cls-2"
+         x="65"
+         width="60"
+         height="60"
+         rx="10"
+         ry="10"
+         id="rect3061"
+         y="0"
+         style="fill:#1f2225" />
+      <g
+         class="cls-6"
+         id="g3063"
+         mask="url(#mask-2)">
+        <g
+           class="cls-4"
+           id="g3065">
+          <rect
+             class="cls-5"
+             x="65"
+             width="60"
+             height="60"
+             rx="10"
+             ry="10"
+             id="rect3067"
+             y="0"
+             style="fill:#6aa2fe" />
+        </g>
+      </g>
+      <rect
+         class="cls-2"
+         x="130"
+         width="60"
+         height="60"
+         rx="10"
+         ry="10"
+         id="rect3069"
+         y="0"
+         style="fill:#1f2225" />
+      <g
+         class="cls-7"
+         id="g3071"
+         mask="url(#mask-3)">
+        <g
+           class="cls-4"
+           id="g3073">
+          <rect
+             class="cls-5"
+             x="130"
+             width="60"
+             height="60"
+             rx="10"
+             ry="10"
+             id="rect3075"
+             y="0"
+             style="fill:#6aa2fe" />
+        </g>
+      </g>
+      <rect
+         class="cls-2"
+         y="65"
+         width="60"
+         height="60"
+         rx="10"
+         ry="10"
+         id="rect3077"
+         x="0"
+         style="fill:#1f2225" />
+      <g
+         class="cls-8"
+         id="g3079"
+         mask="url(#mask-4)">
+        <g
+           class="cls-4"
+           id="g3081">
+          <rect
+             class="cls-5"
+             y="65"
+             width="60"
+             height="60"
+             rx="10"
+             ry="10"
+             id="rect3083"
+             x="0"
+             style="fill:#6aa2fe" />
+        </g>
+      </g>
+      <rect
+         class="cls-2"
+         x="65"
+         y="65"
+         width="60"
+         height="60"
+         rx="10"
+         ry="10"
+         id="rect3085"
+         style="fill:#1f2225" />
+      <g
+         class="cls-9"
+         id="g3087"
+         mask="url(#mask-5)">
+        <g
+           class="cls-4"
+           id="g3089">
+          <rect
+             class="cls-5"
+             x="65"
+             y="65"
+             width="60"
+             height="60"
+             rx="10"
+             ry="10"
+             id="rect3091"
+             style="fill:#6aa2fe" />
+        </g>
+      </g>
+      <rect
+         class="cls-2"
+         x="130"
+         y="65"
+         width="60"
+         height="60"
+         rx="10"
+         ry="10"
+         id="rect3093"
+         style="fill:#1f2225" />
+      <g
+         class="cls-10"
+         id="g3095"
+         mask="url(#mask-6)">
+        <g
+           class="cls-4"
+           id="g3097">
+          <rect
+             class="cls-5"
+             x="130"
+             y="65"
+             width="60"
+             height="60"
+             rx="10"
+             ry="10"
+             id="rect3099"
+             style="fill:#6aa2fe" />
+        </g>
+      </g>
+      <rect
+         class="cls-2"
+         y="130"
+         width="60"
+         height="60"
+         rx="10"
+         ry="10"
+         id="rect3101"
+         x="0"
+         style="fill:#1f2225" />
+      <g
+         class="cls-11"
+         id="g3103"
+         mask="url(#mask-7)">
+        <g
+           class="cls-4"
+           id="g3105">
+          <rect
+             class="cls-5"
+             y="130"
+             width="60"
+             height="60"
+             rx="10"
+             ry="10"
+             id="rect3107"
+             x="0"
+             style="fill:#6aa2fe" />
+        </g>
+      </g>
+      <rect
+         class="cls-2"
+         x="65"
+         y="130"
+         width="60"
+         height="60"
+         rx="10"
+         ry="10"
+         id="rect3109"
+         style="fill:#1f2225" />
+      <g
+         class="cls-12"
+         id="g3111"
+         mask="url(#mask-8)">
+        <g
+           class="cls-4"
+           id="g3113">
+          <rect
+             class="cls-5"
+             x="65"
+             y="130"
+             width="60"
+             height="60"
+             rx="10"
+             ry="10"
+             id="rect3115"
+             style="fill:#6aa2fe" />
+        </g>
+      </g>
+      <rect
+         class="cls-2"
+         x="130"
+         y="130"
+         width="60"
+         height="60"
+         rx="10"
+         ry="10"
+         id="rect3117"
+         style="fill:#1f2225" />
+      <g
+         class="cls-13"
+         id="g3119"
+         mask="url(#mask-9)">
+        <g
+           class="cls-4"
+           id="g3121">
+          <rect
+             class="cls-5"
+             x="130"
+             y="130"
+             width="60"
+             height="60"
+             rx="10"
+             ry="10"
+             id="rect3123"
+             style="fill:#6aa2fe" />
+        </g>
+      </g>
+    </g>
   </g>
 </svg>

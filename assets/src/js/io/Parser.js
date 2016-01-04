@@ -94,8 +94,8 @@
                     .map(function (cellType, index) {
                         var row     = Math.floor(index / 3),
                             column  = index % 3,
-                            x       = macroboardwidth * row + marginleft,
-                            y       = macroboardheight * column + margintop;
+                            x       = macroboardheight * column + marginleft,
+                            y       = macroboardwidth * row + margintop;
                         var mbwidth = macroboardwidth;
                         var mbheight = macroboardheight;
                         var mbplayer = player;
