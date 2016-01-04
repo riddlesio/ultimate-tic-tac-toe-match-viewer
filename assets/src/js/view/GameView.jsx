@@ -81,12 +81,11 @@
                     y={ "150" }
                     className={"TicTacToeGame-playerName TicTacToeGame-player2Name " + player2class }>{ players.names[1] }</text>
 
-                //<text x="300" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player1Fields">{ player1fields }</text>
-                //<text x="1034" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player2Fields">{ player2fields }</text>
+                <text x="300" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player1Fields u-hidden">{ player1fields }</text>
+                <text x="1034" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player2Fields u-hidden">{ player2fields }</text>
 
 
                 <text x="50%" y="110" className="TicTacToeGame-illegalMove">{ illegalMove }</text>
-
                 <Overlay winner={ winner } />
 
             </svg>

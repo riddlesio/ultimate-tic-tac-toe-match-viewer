@@ -53,9 +53,12 @@
             return _.map(data.states, function (state) {
 
                 var { round, column, winner, field, illegalMove, player, player1fields, player2fields } = state;
-                if(winner) {
-                    winner = settings.players.names[parseInt(winner.replace("player", "")) - 1];
+                if (winner) {
+                    if (winner != "none") {
+                        winner = settings.players.names[parseInt(winner.replace("player", "")) - 1];
+                    }
                 }
+                console.log(settings);
                 var rounds = [];
                 for (var i = 0; i < 81; i++) {
                     rounds[i] = "current";

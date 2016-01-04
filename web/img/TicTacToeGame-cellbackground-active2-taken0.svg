@@ -50,7 +50,7 @@
   <defs
      id="defs4">
     <style
-       id="style6">.cls-1{isolation:isolate;}.cls-2{fill:#1f2225;}.cls-3{mask:url(#mask);}.cls-4{mix-blend-mode:screen;}.cls-5{fill:#6aa2fe;}.cls-6{filter:url(#luminosity-invert);}</style>
+       id="style6">.cls-1{isolation:isolate;}.cls-2{fill:#1f2225;}.cls-3{mask:url(#mask);}.cls-4{mix-blend-mode:screen;}.cls-5{fill:#ff5552;}.cls-6{filter:url(#luminosity-invert);}</style>
     <filter
        id="luminosity-invert"
        filterUnits="userSpaceOnUse"
@@ -118,10 +118,9 @@
              id="rect29"
              x="0"
              y="0"
-             style="fill:#6aa2fe" />
+             style="fill:#ff5552" />
         </g>
       </g>
     </g>
   </g>
 </svg>
-

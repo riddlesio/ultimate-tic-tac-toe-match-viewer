@@ -19,7 +19,9 @@
         return <g
             key="key"
             className="TicTacToeGame-playerView" >
-
+                <g dangerouslySetInnerHTML={{
+                    __html: `<use x="0" y="0" xlink:href="#TicTacToeGame-background" />`
+                }} />
                 <g className="TicTacToeGame-grid">
                     { _.map(cells, Cell) }
                 </g>

@@ -51,7 +51,6 @@
                     }
 
                     state = nextState;
-                    console.log(state.round);
 
                     window.requestAnimationFrame(function () {
                         self.render(nextState, currentState);
