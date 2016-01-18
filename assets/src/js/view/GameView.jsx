@@ -51,18 +51,6 @@
                     <symbol id="TicTacToeGame-cellbackground-active0-taken2" dangerouslySetInnerHTML={{
                         __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active0-taken2.svg" />`
                     }} />
-                    <symbol id="TicTacToeGame-cellbackground-active1-taken1" dangerouslySetInnerHTML={{
-                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active0-taken1.svg" />`
-                    }} />
-                    <symbol id="TicTacToeGame-cellbackground-active2-taken2" dangerouslySetInnerHTML={{
-                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active0-taken2.svg" />`
-                    }} />
-                    <symbol id="TicTacToeGame-cellbackground-active2-taken1" dangerouslySetInnerHTML={{
-                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active0-taken1.svg" />`
-                    }} />
-                    <symbol id="TicTacToeGame-cellbackground-active1-taken2" dangerouslySetInnerHTML={{
-                        __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cellbackground-active0-taken2.svg" />`
-                    }} />
                     <symbol id="round-past" dangerouslySetInnerHTML={{
                         __html: `<image width="30" height="30" xlink:href="./img/round-past.svg" />`
                     }} />
