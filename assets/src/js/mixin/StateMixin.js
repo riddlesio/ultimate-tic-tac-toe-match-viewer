@@ -19,13 +19,11 @@
                  */
                 setStates: function (diff) {
                     var self = this,
-                        currentState,
                         nextState,
                         shouldComponentUpdate = self.shouldComponentUpdate;
 
-                    currentState = state;
-                    nextState    = _.merge({}, state, diff);
-                    self.render(state, nextState);
+                    nextState = _.merge({}, state, diff);
+                    self.render(nextState, state);
 
                     state = nextState;
                     return self;
