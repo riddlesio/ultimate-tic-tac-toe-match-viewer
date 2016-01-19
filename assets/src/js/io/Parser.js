@@ -116,10 +116,6 @@
                 };
             });
 
-            
-
-            console.log(states);
-
             return states;
         }
     };
