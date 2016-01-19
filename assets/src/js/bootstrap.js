@@ -14,7 +14,7 @@
     // Wraps the game for use on TheAIGames website
     // Takes care of setting up and destroying the competition namespace
     game = new TicTacToe({
-            name: 'connectfour-battle',
+            name: 'tictactoe',
             player: {
                 // Determines whether they player's chrome should be displayed
                 chrome: displayChrome,

@@ -19,7 +19,7 @@
                     var self = this,
                         { currentState } = self.getState();
 
-                    if (currentState !== self.states.length) {
+                    if (currentState < self.states.length - 1) {
                         self.setStates({ currentState: currentState + 1 });
                     }
                     else {

@@ -12,9 +12,11 @@
 
         parsePlayerNames: function (settings) {
 
-            var names = window.frameElement.getAttribute("data-players").split(",");
-            console.log(names);
+            var names = window.frameElement.getAttribute("data-players").split(","),
+                emailHash = window.frameElement.getAttribute("data-emailHash").split(",");
+
             settings.players.names = names;
+            settings.players.emailHash = emailHash;
             return settings;
         },
 
@@ -45,17 +47,24 @@
 
         parseStates: function (data, settings) {
 
-            var field                                       = settings.field,
-                macroboard                                  = settings.macroboard,
-                { width, height, cellmargin }               = field.cell,
-                { margintop, marginleft }                   = field.margins;
-            var cells = 0;
+            var initialState,
+                states,
+                field                           = settings.field,
+                { width, height, cellmargin }   = field.cell,
+                { margintop, marginleft }       = field.margins;
+
+            initialState = _.cloneDeep(data.states[0]);
+            initialState.field = initialState.field.replace(/8/g, '0');
+            initialState.player = -1;
+            initialState.round = -1;
+            data.states.unshift(initialState);
+
             return _.map(data.states, function (state) {
 
                 var { round, column, winner, field, illegalMove, player, player1fields, player2fields } = state;
                 if (winner) {
                     if (winner != "none") {
-                        //winner = settings.players.names[parseInt(winner.replace("player", "")) - 1];
+                        winner = settings.players.names[parseInt(winner.replace("player", "")) - 1];
                     }
                 }
                 var rounds = [];
@@ -71,13 +80,11 @@
                     round,
                     column,
                     winner,
-                    field,
                     illegalMove,
                     player1fields,
                     player2fields,
                     player,
-                    cells: _
-                        .chain(field)
+                    cells: _.chain(field)
                         .thru((string) => string.split(/,|;/))
                         .map(function (cellType, index) {
                             var player = 0;
@@ -96,19 +103,24 @@
                             return { row, column, x, y, width, height, player, active, taken };
                         })
                         .value(),
-                    rounds: _
-                    .chain(rounds)
-                    .map(function (type, index) {
-                        var row     = Math.floor(index / 9),
-                            column  = index % 9,
-                            x       = column * 35 + 130,
-                            y       = row * 35 + 300;
+                    rounds: _.chain(rounds)
+                        .map(function (type, index) {
+                            var row     = Math.floor(index / 9),
+                                column  = index % 9,
+                                x       = column * 35 + 130,
+                                y       = row * 35 + 300;
 
-                        return { row, column, x, y, width, height, type, marginleft, margintop, index };
-                    })
-                    .value()
+                            return { row, column, x, y, width, height, type, marginleft, margintop, index };
+                        })
+                        .value()
                 };
             });
+
+            
+
+            console.log(states);
+
+            return states;
         }
     };
 
