@@ -17,10 +17,10 @@
             player1class        = "", 
             player2class        = "";
             
-        if (state.player === 1) {
-            player1class = " active ";
-        } else if (state.player === 2) {
+        if (state.nextplayer === 1) {
             player2class = " active ";
+        } else if (state.nextplayer === 2) {
+            player1class = " active ";
         }
 
         return (

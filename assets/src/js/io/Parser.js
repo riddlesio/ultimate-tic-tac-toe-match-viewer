@@ -61,7 +61,7 @@
 
             return _.map(data.states, function (state) {
 
-                var { round, column, winner, field, illegalMove, player, player1fields, player2fields } = state;
+                var { round, column, winner, field, illegalMove, player, nextplayer, player1fields, player2fields } = state;
                 if (winner) {
                     if (winner != "none") {
                         winner = settings.players.names[parseInt(winner.replace("player", "")) - 1];
@@ -84,6 +84,7 @@
                     player1fields,
                     player2fields,
                     player,
+                    nextplayer,
                     cells: _.chain(field)
                         .thru((string) => string.split(/,|;/))
                         .map(function (cellType, index) {
