@@ -56,18 +56,16 @@
                 // "self" can be shortened by the minifier unlike "this"
                 self = this;
 
-            currentState  = 0;
-            settings      = _.merge(this.getDefaults(), data.settings);
-            playernames = Parser.parsePlayerNames(settings);
-            states   = Parser.parseStates(data, settings);
-            moves    = Parser.parseMoveSet(states);
+            currentState    = 0;
+            settings        = _.merge(this.getDefaults(), data.settings);
+            playernames     = Parser.parsePlayerNames(settings);
+            states          = Parser.parseStates(data, settings);
 
             self.settings = settings;
             self.states   = states;
             self.playernames = playernames;
 
-            self.setMoves(moves)
-                .setState({ currentState })
+            self.setState({ currentState })
                 .play();
         },
 

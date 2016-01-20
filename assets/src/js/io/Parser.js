@@ -20,31 +20,6 @@
             return settings;
         },
 
-        parseMoveSet: function (states) {
-
-            var currentRound;
-
-            
-            return _
-                .chain(states)
-                .map(function (state, index) {
-
-                    var label,
-                        { round } = state;
-
-                    if (currentRound === round) {
-                        return false;
-                    }
-
-                    currentRound = round;
-                    label = `Round ${round}`;
-
-                    return { label, value: index };
-                })
-                .compact()
-                .value();
-        },
-
         parseStates: function (data, settings) {
 
             var initialState,
@@ -53,36 +28,39 @@
                 { width, height, cellmargin }   = field.cell,
                 { margintop, marginleft }       = field.margins;
 
+            // create initial empty board state
             initialState = _.cloneDeep(data.states[0]);
-            initialState.field = initialState.field.replace(/8/g, '0');
+            initialState.field = initialState.field.replace(/4|8/g, '0');
             initialState.player = -1;
-            initialState.round = -1;
+            initialState.move = -1;
             data.states.unshift(initialState);
 
             return _.map(data.states, function (state) {
 
-                var { round, column, winner, field, illegalMove, player, player1fields, player2fields } = state;
+                var i,
+                    moves = {},
+                    { move, column, winner, field, illegalMove, player } = state;
+
                 if (winner) {
                     if (winner != "none") {
                         winner = settings.players.names[parseInt(winner.replace("player", "")) - 1];
                     }
                 }
-                var rounds = [];
-                for (var i = 0; i < 81; i++) {
-                    rounds[i] = "current";
-                    if (i < round) {
-                        rounds[i] = "past";
-                    } else if (i > round) {
-                        rounds[i] = "future";
+
+                for (i = 1; i <= 81; i++) {
+                    moves[i] = "current";
+                    if (i < move) {
+                        moves[i] = "past";
+                    } else if (i > move) {
+                        moves[i] = "future";
                     }
                 }
+
                 return {
-                    round,
+                    move,
                     column,
                     winner,
                     illegalMove,
-                    player1fields,
-                    player2fields,
                     player,
                     cells: _.chain(field)
                         .thru((string) => string.split(/,|;/))
@@ -103,14 +81,14 @@
                             return { row, column, x, y, width, height, player, active, taken };
                         })
                         .value(),
-                    rounds: _.chain(rounds)
-                        .map(function (type, index) {
-                            var row     = Math.floor(index / 9),
-                                column  = index % 9,
+                    moves: _.chain(moves)
+                        .map(function (type, move) {
+                            var row     = Math.floor((move - 1) / 9),
+                                column  = (move - 1) % 9,
                                 x       = column * 35 + 130,
                                 y       = row * 35 + 300;
 
-                            return { row, column, x, y, width, height, type, marginleft, margintop, index };
+                            return { x, y, width, height, type, move };
                         })
                         .value()
                 };

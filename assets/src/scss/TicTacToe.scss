@@ -22,13 +22,6 @@ html {
 	fill: #ffffff;
 }
 
-.TicTacToeGame-currentRound {
-	text-anchor: middle;
-	font-family: Montserrat;
-	font-size: 3.5rem;
-	fill: #6ca3ff;
-}
-
 .TicTacToeGame-illegalMove {
 	text-anchor: middle;
 	font-family: Montserrat;
@@ -65,11 +58,11 @@ html {
 	fill: #fec278;
 }
 
-.TicTacToeGame-player1Name, .TicTacToeGame-player1Fields {
+.TicTacToeGame-player1Color {
 	fill: #fe6f69;
 }
 
-.TicTacToeGame-player2Name, .TicTacToeGame-player2Fields {
+.TicTacToeGame-player2Color {
 	fill: #69a2fc;
 }
 

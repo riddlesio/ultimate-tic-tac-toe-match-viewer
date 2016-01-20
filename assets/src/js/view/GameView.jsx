@@ -10,17 +10,20 @@
     var GameView;
 
     GameView = createView('GameView', function (props) {
+        
         var { state, settings } = props,
-            { round, column, winner, field, fieldWidth, fieldHeight, player1fields, player2fields, cells, illegalMove, rounds } = state,
-            { players, field }  = settings,
-            cell                = field.cell,
+            { winner, illegalMove, player } = state,
+            { players }         = settings,
             player1class        = "", 
-            player2class        = "";
+            player2class        = "",
+            illegalMoveClass    = "";
             
-        if (state.player === 1) {
-            player1class = " active ";
-        } else if (state.player === 2) {
-            player2class = " active ";
+        if (player === 1) {
+            player1class = " active";
+            illegalMoveClass = " TicTacToeGame-player1Color";
+        } else if (player === 2) {
+            player2class = " active";
+            illegalMoveClass = " TicTacToeGame-player2Color";
         }
 
         return (
@@ -81,17 +84,14 @@
                 <text
                     x={ "158" }
                     y={ "235" }
-                    className={"TicTacToeGame-playerName TicTacToeGame-player1Name " + player1class }>{ players.names[0] }</text>
+                    className={"TicTacToeGame-playerName TicTacToeGame-player1Color" + player1class }>{ players.names[0] }</text>
                 <text
                     x={ "410" }
                     y={ "235" }
-                    className={"TicTacToeGame-playerName TicTacToeGame-player2Name " + player2class }>{ players.names[1] }</text>
-
-                <text x="300" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player1Fields u-hidden">{ player1fields }</text>
-                <text x="1034" y="100" className="TicTacToeGame-playerFields TicTacToeGame-player2Fields u-hidden">{ player2fields }</text>
+                    className={"TicTacToeGame-playerName TicTacToeGame-player2Color" + player2class }>{ players.names[1] }</text>
 
 
-                <text x="50%" y="110" className="TicTacToeGame-illegalMove">{ illegalMove }</text>
+                <text x="50%" y="60" className={"TicTacToeGame-illegalMove" + illegalMoveClass }>{ illegalMove }</text>
                 <Overlay winner={ winner } />
 
             </svg>

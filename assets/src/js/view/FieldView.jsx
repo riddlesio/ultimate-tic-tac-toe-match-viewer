@@ -5,12 +5,12 @@
         React       = require('react'),
         createView  = require('omniscient'),
         Cell        = require('./Cell.jsx'),
-        Round        = require('./Round.jsx');
+        MoveNumber  = require('./MoveNumber.jsx');
 
     var FieldView;
 
     FieldView = createView('FieldView', function (state) {
-        var { round, column, winner, field, fieldWidth, fieldHeight, cells, rounds } = state;
+        var { round, column, winner, field, fieldWidth, fieldHeight, cells, moves } = state;
 
         return <g
             key="key"
@@ -18,9 +18,9 @@
                 <g className="TicTacToeGame-grid">
                     { _.map(cells, Cell) }
                 </g>
-                <text x="130" y="284" className="TicTacToeGame-rounds">Rounds</text>
+                <text x="130" y="284" className="TicTacToeGame-rounds">Moves</text>
                 <g className="TicTacToeGame-rounds">
-                    { _.map(rounds, Round) }
+                    { _.map(moves, MoveNumber) }
                 </g>
 
             </g>;
