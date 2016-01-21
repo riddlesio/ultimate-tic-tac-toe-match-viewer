@@ -17,7 +17,7 @@
             player1class        = "", 
             player2class        = "",
             illegalMoveClass    = "";
-            
+
         if (player === 1) {
             player1class = " active";
             illegalMoveClass = " TicTacToeGame-player1Color";
