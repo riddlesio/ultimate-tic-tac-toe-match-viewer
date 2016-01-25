@@ -29,12 +29,6 @@
         return (
             <svg className="TicTacToeGame" viewBox="0 0 1200 705" preserveAspectRatio="xMidYMid meet">
                 <defs>
-                    <symbol id="background-playername-red" dangerouslySetInnerHTML={{
-                        __html: `<image width="328" height="71" xlink:href="./img/background-playername-red.svg" />`
-                    }} />
-                    <symbol id="background-playername-yellow" dangerouslySetInnerHTML={{
-                        __html: `<image width="328" height="71" xlink:href="./img/background-playername-yellow.svg" />`
-                    }} />
                     <symbol id="TicTacToeGame-cell-player1" dangerouslySetInnerHTML={{
                         __html: `<image width="55" height="55" xlink:href="./img/TicTacToeGame-cell-player1.svg" />`
                     }} />

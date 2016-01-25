@@ -12,8 +12,11 @@
 
         parsePlayerNames: function (settings) {
 
-            var names = window.frameElement.getAttribute("data-players").split(","),
-                emailHash = window.frameElement.getAttribute("data-emailHash").split(",");
+            var names = window.frameElement.getAttribute("data-players"),
+                emailHash = window.frameElement.getAttribute("data-emailhash");
+
+            names = names ? names.split(',') : ['',''];
+            emailHash = emailHash ? emailHash.split(',') : ['',''];
 
             settings.players.names = names;
             settings.players.emailHash = emailHash;

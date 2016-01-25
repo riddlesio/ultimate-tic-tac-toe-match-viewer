@@ -9,7 +9,11 @@ server = http.createServer(function (request, response) {
 	fs.readFile([publicDir, request.url].join(''), function (error, content) {
 		
 		if (!error) {
-			response.writeHead(200);
+			if (request.url.indexOf('.svg') > -1) {
+ 				response.writeHead(200, { 'Content-Type': 'image/svg+xml'});
+ 			} else {
+ 				response.writeHead(200);
+ 			}
 			response.end(content, 'utf-8');
 
 			return;
@@ -31,7 +35,7 @@ server = http.createServer(function (request, response) {
 		} else {
 			// else serve index.html
 			fs.readFile([publicDir, 'index.html'].join(''), function (error, content) {
-		
+
 				if (!error) {
 					response.writeHead(200, { 'Content-Type': 'text/html' });
 					response.end(content, 'utf-8');
