@@ -8,9 +8,6 @@ body {
 	overflow: hidden;
 
 	font-size: 62.5%;
-
-	background: url('../img/background-tictactoe.jpg') no-repeat center;
-	background-size: cover;
 }
 
 .GamePlayer {
@@ -26,7 +23,7 @@ body {
 
 	background: transparent;
 	border: none;
-	color: darken(white, 10%);
+	color: #fbfbfb;
 	font-size: 1.6rem;
 }
 
@@ -69,14 +66,10 @@ body {
  	bottom: 0;
 
 	overflow-y: scroll;
+}
 
-
-	&.is-collapsed {
-
-		.Dropdown-item:not(.is-selected) {
-			height: 0;
-		}
-	}
+.GamePlayer-dropdown.is-collapsed .Dropdown-item:not(.is-selected) {
+	height: 0;
 }
 
 .Dropdown {
