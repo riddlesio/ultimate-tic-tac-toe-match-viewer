@@ -6,17 +6,19 @@ import StateMixin                       from '../mixin/StateMixin';
 import GameLoopMixin                    from '../mixin/SimpleGameLoopMixin';
 import { parseStates, parsePlayerNames } from '../io/Parser';
 import GameView                         from '../view/GameView.jsx';
-import _defaults                        from '../data/gameDefaults.json';
+import defaults                        from '../data/gameDefaults.json';
+
+const { PlaybackEvent } = event;
 
 /**
- * TicTacToe class
+ * MatchViewer class
  * @constructor
  */
 const MatchViewer = createGame({
 
     /**
-     * TicTacToe construct function
-     * Automatically executed when instantiating the TicTacToe class
+     * MatchViewer construct function
+     * Automatically executed when instantiating the MatchViewer class
      * @param  {Object} options
      */
     construct: function (options) {
@@ -35,7 +37,7 @@ const MatchViewer = createGame({
     },
 
     getDefaults: function () {
-        return _defaults;
+        return defaults;
     },
 
     /**
@@ -45,17 +47,22 @@ const MatchViewer = createGame({
 
     handleData: function (data) {
 
+        let settings;
         const currentState  = 0;
-        const settings      = _.merge(this.getDefaults(), data.playerData);
-        const states        = parseStates(data.matchData, settings);
-        const playernames   = parsePlayerNames(settings);
+        const matchData = data.matchData;
+        const playerData = data.playerData;
 
-        this.settings       = settings;
-        this.states         = states;
-        this.playernames    = playernames;
+        settings = matchData.settings;
+        settings = _.merge(this.getDefaults(), settings);
+        settings = parsePlayerNames(playerData, settings);
 
-        this.triggerStateChange({ currentState })
-            .play();
+        const states = parseStates(matchData, settings);
+
+        this.settings = settings;
+        this.states = states;
+
+        this.triggerStateChange(currentState);
+        this.play();
     },
 
     /**
@@ -81,7 +88,7 @@ const MatchViewer = createGame({
 
 /**
  * Register the event listeners
- * @param {TetrisGame} context
+ * @param {MatchViewer} context
  */
 function registerEventListeners(context) {
 
@@ -96,7 +103,7 @@ function registerEventListeners(context) {
 
 /**
  * Release the event listeners
- * @param {TetrisGame} context
+ * @param {MatchViewer} context
  */
 function releaseEventListeners(context) {
 
