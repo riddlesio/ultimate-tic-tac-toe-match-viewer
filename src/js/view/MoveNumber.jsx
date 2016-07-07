@@ -12,8 +12,8 @@ const MoveNumber = createView(function (data) {
             <use
                 x={ x }
                 y={ y }
-                width={ width }
-                height={ height }
+                width="30"
+                height="30"
                 xlinkHref={ `#round-${type}` }
             />
             <text x={ textX } y={ textY } className={ `round-${type}` }>

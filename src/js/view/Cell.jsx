@@ -19,6 +19,8 @@ const Cell = createView(function (data) {
     const backgroundClassName   = `active${active}-taken${taken}`;
     const className             = createClassName(player);
 
+    console.log(backgroundClassName);
+
     return (
         <g key={ key } className="TicTacToeGame-cell">
             <use

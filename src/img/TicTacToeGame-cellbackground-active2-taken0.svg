@@ -47,17 +47,9 @@
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg2" />
-  <defs
-     id="defs4">
-    <style
-       id="style6">.cls-1{isolation:isolate;}.cls-2{fill:#1f2225;}.cls-3{mask:url(#mask);}.cls-4{mix-blend-mode:screen;}.cls-5{fill:#6aa2fe;}.cls-6{filter:url(#luminosity-invert);}</style>
-    <filter
-       id="luminosity-invert"
-       filterUnits="userSpaceOnUse"
-       color-interpolation-filters="sRGB">
-      <feColorMatrix
-         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"
-         id="feColorMatrix9" />
+
+    <filter id="luminosity-invert" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+      <feColorMatrix values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0" id="feColorMatrix9" />
     </filter>
     <mask
        id="mask"
@@ -66,62 +58,44 @@
        width="27"
        height="27"
        maskUnits="userSpaceOnUse">
-      <g
-         class="cls-6"
-         id="g12"
-         style="filter:url(#luminosity-invert)">
-        <g
-           transform="translate(-1,-1)"
-           id="g14">
+      <g filter="url(#luminosity-invert)">
+        <g transform="translate(-1,-1)">
           <image
              width="27"
              height="27"
              transform="translate(-1,-1)"
-             xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAIAAAACtmMCAAAACXBIWXMAAAsSAAALEgHS3X78AAABcElEQVRIS+2VQWqDQBSGcy+9iZgTGDeiGAwInsWF4BFcBMlGXKio7SJ3cJFlUGy/JpuOjExoWmih/y7O/F/mvTfz3mbzl6Tr+na7tW3b87z9fh8EwWFFwU2+77uuu9vtcOGV4KIoStP0dDpVVdV1Xd/3Lze9irp/ZLVtW3bmeY4rDENN0wQi/8PC+Xy+XC7jOL49pmma2I8rSRLTNAUiwXI6llUQiXAdj0fCF4jkjhAeP91n4SrLkpwKREpB7lReueZ5bpqGQglEakeyVd5VUSUIApE7QQVVxlUR3/cTISyJ3DWVcVX/xJ8kPlnr5e3h9zNEyQ1//s3wjgUir5KvKqNcvOu6rpfvms5B76HfqewSXa/XoigcxxGIdDe68df64zAMWZZZliUQFz2cQFScj2A5HTgKHcexYRgCkTnDrKC5041pn/Q70tqtqL2J3BEspwNHEiXDi9HDrCB8csqO+8BbG4RUlj3kjmA5nQT3q/UOXdRdgMJtoh8AAAAASUVORK5CYII="
-             id="image16" />
+             xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAIAAAACtmMCAAAACXBIWXMAAAsSAAALEgHS3X78AAABcElEQVRIS+2VQWqDQBSGcy+9iZgTGDeiGAwInsWF4BFcBMlGXKio7SJ3cJFlUGy/JpuOjExoWmih/y7O/F/mvTfz3mbzl6Tr+na7tW3b87z9fh8EwWFFwU2+77uuu9vtcOGV4KIoStP0dDpVVdV1Xd/3Lze9irp/ZLVtW3bmeY4rDENN0wQi/8PC+Xy+XC7jOL49pmma2I8rSRLTNAUiwXI6llUQiXAdj0fCF4jkjhAeP91n4SrLkpwKREpB7lReueZ5bpqGQglEakeyVd5VUSUIApE7QQVVxlUR3/cTISyJ3DWVcVX/xJ8kPlnr5e3h9zNEyQ1//s3wjgUir5KvKqNcvOu6rpfvms5B76HfqewSXa/XoigcxxGIdDe68df64zAMWZZZliUQFz2cQFScj2A5HTgKHcexYRgCkTnDrKC5041pn/Q70tqtqL2J3BEspwNHEiXDi9HDrCB8csqO+8BbG4RUlj3kjmA5nQT3q/UOXdRdgMJtoh8AAAAASUVORK5CYII="
+          />
         </g>
       </g>
     </mask>
-  </defs>
-  <title
-     id="title18">blue_selected_2</title>
-  <g
-     class="cls-1"
-     id="g20"
-     transform="translate(1,1)">
-    <g
-       id="Layer_1"
-       data-name="Layer 1">
-      <rect
-         class="cls-2"
-         width="23"
-         height="23"
-         rx="3.8299999"
-         ry="3.8299999"
-         id="rect23"
-         x="0"
-         y="0"
-         style="fill:#1f2225" />
-      <g
-         class="cls-3"
-         id="g25"
-         mask="url(#mask)">
-        <g
-           class="cls-4"
-           id="g27">
-          <rect
-             class="cls-5"
-             width="23"
-             height="23"
-             rx="3.8299999"
-             ry="3.8299999"
-             id="rect29"
-             x="0"
-             y="0"
-             style="fill:#6aa2fe" />
+  <symbol id="" viewBox="0 0 25 25">
+    <g isolation="isolate" transform="translate(1,1)">
+      <g>
+        <rect
+           width="23"
+           height="23"
+           rx="3.8299999"
+           ry="3.8299999"
+           id="rect23"
+           x="0"
+           y="0"
+           fill="#1f2225" />
+        <g id="g25" mask="url(#mask)">
+          <g mixBlendMode="screen">
+            <rect
+               width="23"
+               height="23"
+               rx="3.8299999"
+               ry="3.8299999"
+               id="rect29"
+               x="0"
+               y="0"
+               fill="#6aa2fe" />
+          </g>
         </g>
       </g>
     </g>
-  </g>
+  </symbol>
 </svg>
 
