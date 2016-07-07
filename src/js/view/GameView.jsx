@@ -40,7 +40,7 @@ const GameView = createView('GameView', function (props) {
                     width="27"
                     height="27"
                     maskUnits="userSpaceOnUse">
-                    <g filter="`url(#luminosityInvert)">
+                    <g style={{ filter: 'url(#luminosityInvert)' }}>
                         <g transform="translate(-1,-1)">
                             <image
                                 width="27"
@@ -123,6 +123,8 @@ const GameView = createView('GameView', function (props) {
                         />
                     </g>
                 </symbol>
+
+
                 <symbol id="TicTacToeGame-cellbackground-active1-taken0" viewBox="0 0 25 25">
                     <g isolation="isolate" transform="translate(1,1)">
                         <g>
@@ -135,7 +137,7 @@ const GameView = createView('GameView', function (props) {
                                 y="0"
                                 fill="#1f2225"
                             />
-                            <g mask="url(#mask)">
+                            <g style={{ mask: 'url(#mask)' }}>
                                 <g mixBlendMode="screen">
                                     <rect
                                         width="23"
@@ -164,7 +166,7 @@ const GameView = createView('GameView', function (props) {
                                 y="0"
                                 fill="#1f2225"
                             />
-                            <g mask="url(#mask)">
+                            <g style={{ mask: 'url(#mask)' }}>
                                 <g mixBlendMode="screen">
                                     <rect
                                         width="23"
@@ -180,6 +182,8 @@ const GameView = createView('GameView', function (props) {
                         </g>
                     </g>
                 </symbol>
+
+
                 <symbol id="round-past"   viewBox="0 0 672 672">
                     <path
                         fill="#1f2225"
