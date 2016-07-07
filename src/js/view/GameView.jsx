@@ -63,13 +63,8 @@ const GameView = createView('GameView', function (props) {
             </defs>
 
             { FieldView(state) }
-
-            <g dangerouslySetInnerHTML={{
-                __html: `<use x="100" y="85" rx="0.1" ry="0.1" xlink:href="#TicTacToeGame-avatar1" />`
-            }} />
-            <g dangerouslySetInnerHTML={{
-                __html: `<use x="352" y="85" xlink:href="#TicTacToeGame-avatar2" />`
-            }} />
+            <use x="100" y="85" rx="0.1" ry="0.1" xlinkHref="#TicTacToeGame-avatar1" />
+            <use x="352" y="85" xlinkHref="#TicTacToeGame-avatar2" />
             <text
                 x={ '158' }
                 y={ '235' }
