@@ -1,8 +1,7 @@
 import React from 'react';
 import createView from 'omniscient';
-
-const FieldView = require('./FieldView.jsx');
-const Overlay = require('./Overlay.jsx');
+import FieldView from './FieldView.jsx';
+import Overlay from './Overlay.jsx';
 
 const GameView = createView('GameView', function (props) {
 

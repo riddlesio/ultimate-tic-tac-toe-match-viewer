@@ -1,30 +1,24 @@
-(function (undefined) {
+import _           from 'lodash';
+import React       from 'react';
+import createView  from 'omniscient';
+import Cell        from './Cell.jsx';
+import MoveNumber  from './MoveNumber.jsx';
 
-    const
-        _           = require('lodash'),
-        React       = require('react'),
-        createView  = require('omniscient'),
-        Cell        = require('./Cell.jsx'),
-        MoveNumber  = require('./MoveNumber.jsx');
+const FieldView = createView('FieldView', function (state) {
 
-    var FieldView;
+    const { cells, moves } = state;
 
-    FieldView = createView('FieldView', function (state) {
-        var { round, column, winner, field, fieldWidth, fieldHeight, cells, moves } = state;
+    return (
+        <g key="key" className="TicTacToeGame-playerView">
+            <g className="TicTacToeGame-grid">
+                { _.map(cells, Cell) }
+            </g>
+            <text x="130" y="284" className="TicTacToeGame-rounds">Moves</text>
+            <g className="TicTacToeGame-rounds">
+                { _.map(moves, MoveNumber) }
+            </g>
+        </g>
+    );
+});
 
-        return <g
-            key="key"
-            className="TicTacToeGame-playerView" >
-                <g className="TicTacToeGame-grid">
-                    { _.map(cells, Cell) }
-                </g>
-                <text x="130" y="284" className="TicTacToeGame-rounds">Moves</text>
-                <g className="TicTacToeGame-rounds">
-                    { _.map(moves, MoveNumber) }
-                </g>
-
-            </g>;
-    });
-
-    module.exports = FieldView;
-}());
+export default FieldView;

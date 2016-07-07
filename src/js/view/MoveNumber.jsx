@@ -1,27 +1,26 @@
-(function (undefined) {
+import React      from 'react';
+import createView from 'omniscient';
 
-    const
-        React      = require('react'),
-        createView = require('omniscient'),
-        classNames = require('classnames');
+const MoveNumber = createView(function (data) {
 
-    var MoveNumber;
+    const { x, y, width, height, type, move } = data;
+    const textX = x + 15;
+    const textY = y + 20;
 
-    MoveNumber = createView(function (data) {
-        var { x, y, width, height, type, move } = data,
-            id = "x" + x + "y" + y,
-            textx = x + 15, 
-            texty = y + 20;
+    return (
+        <g>
+            <use
+                x={ x }
+                y={ y }
+                width={ width }
+                height={ height }
+                xlinkHref={ `#round-${type}` }
+            />
+            <text x={ textX } y={ textY } className={ `round-${type}` }>
+                { move }
+            </text>
+        </g>
+    );
+});
 
-        return (
-         <g id={ id } dangerouslySetInnerHTML={{
-             __html: `<use x="${ x }" y="${ y }" width="${ width }" height="${ height }" xlink:href="#round-${ type }" />
-             <text x="${ textx }" y="${ texty }" class="round-${ type }">${ move }</text>`
-         }} />             
-        );
-    });
-
-    // Private functions
-
-    module.exports = MoveNumber;
-}());
+export default MoveNumber;
