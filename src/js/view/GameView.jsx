@@ -24,15 +24,6 @@ const GameView = createView('GameView', function (props) {
     return (
         <svg className="TicTacToeGame" viewBox="0 0 1200 705" preserveAspectRatio="xMidYMid meet">
             <defs>
-                <filter
-                    id="luminosityInvert"
-                    filterUnits="userSpaceOnUse"
-                    colorInterpolationFilters="sRGB">
-                    <feColorMatrix
-                        type="matrix"
-                        values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"
-                    />
-                </filter>
                 <mask
                     id="mask"
                     x="-2"
@@ -40,15 +31,13 @@ const GameView = createView('GameView', function (props) {
                     width="27"
                     height="27"
                     maskUnits="userSpaceOnUse">
-                    <g style={{ filter: 'url(#luminosityInvert)' }}>
-                        <g transform="translate(-1,-1)">
-                            <image
-                                width="27"
-                                height="27"
-                                transform="translate(-1,-1)"
-                                xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAIAAAACtmMCAAAACXBIWXMAAAsSAAALEgHS3X78AAABcElEQVRIS+2VQWqDQBSGcy+9iZgTGDeiGAwInsWF4BFcBMlGXKio7SJ3cJFlUGy/JpuOjExoWmih/y7O/F/mvTfz3mbzl6Tr+na7tW3b87z9fh8EwWFFwU2+77uuu9vtcOGV4KIoStP0dDpVVdV1Xd/3Lze9irp/ZLVtW3bmeY4rDENN0wQi/8PC+Xy+XC7jOL49pmma2I8rSRLTNAUiwXI6llUQiXAdj0fCF4jkjhAeP91n4SrLkpwKREpB7lReueZ5bpqGQglEakeyVd5VUSUIApE7QQVVxlUR3/cTISyJ3DWVcVX/xJ8kPlnr5e3h9zNEyQ1//s3wjgUir5KvKqNcvOu6rpfvms5B76HfqewSXa/XoigcxxGIdDe68df64zAMWZZZliUQFz2cQFScj2A5HTgKHcexYRgCkTnDrKC5041pn/Q70tqtqL2J3BEspwNHEiXDi9HDrCB8csqO+8BbG4RUlj3kjmA5nQT3q/UOXdRdgMJtoh8AAAAASUVORK5CYII="
-                            />
-                        </g>
+                    <g transform="translate(-1,-1)">
+                        <image
+                            width="27"
+                            height="27"
+                            transform="translate(-1,-1)"
+                            xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAIAAAACtmMCAAAACXBIWXMAAAsSAAALEgHS3X78AAABcElEQVRIS+2VQWqDQBSGcy+9iZgTGDeiGAwInsWF4BFcBMlGXKio7SJ3cJFlUGy/JpuOjExoWmih/y7O/F/mvTfz3mbzl6Tr+na7tW3b87z9fh8EwWFFwU2+77uuu9vtcOGV4KIoStP0dDpVVdV1Xd/3Lze9irp/ZLVtW3bmeY4rDENN0wQi/8PC+Xy+XC7jOL49pmma2I8rSRLTNAUiwXI6llUQiXAdj0fCF4jkjhAeP91n4SrLkpwKREpB7lReueZ5bpqGQglEakeyVd5VUSUIApE7QQVVxlUR3/cTISyJ3DWVcVX/xJ8kPlnr5e3h9zNEyQ1//s3wjgUir5KvKqNcvOu6rpfvms5B76HfqewSXa/XoigcxxGIdDe68df64zAMWZZZliUQFz2cQFScj2A5HTgKHcexYRgCkTnDrKC5041pn/Q70tqtqL2J3BEspwNHEiXDi9HDrCB8csqO+8BbG4RUlj3kjmA5nQT3q/UOXdRdgMJtoh8AAAAASUVORK5CYII="
+                        />
                     </g>
                 </mask>
                 <symbol id="TicTacToeGame-cell-player1" viewBox="0 0 25 25">
@@ -135,7 +124,7 @@ const GameView = createView('GameView', function (props) {
                                 ry="3.8299999"
                                 x="0"
                                 y="0"
-                                fill="#1f2225"
+                                fill="#fe6f69"
                             />
                             <g style={{ mask: 'url(#mask)' }}>
                                 <g mixBlendMode="screen">
@@ -146,7 +135,7 @@ const GameView = createView('GameView', function (props) {
                                         ry="3.8299999"
                                         x="0"
                                         y="0"
-                                        fill="#ff5552"
+                                        fill="#1f2225"
                                     />
                                 </g>
                             </g>
@@ -161,10 +150,9 @@ const GameView = createView('GameView', function (props) {
                                 height="23"
                                 rx="3.8299999"
                                 ry="3.8299999"
-                                id="rect23"
                                 x="0"
                                 y="0"
-                                fill="#1f2225"
+                                fill="#69a2fc"
                             />
                             <g style={{ mask: 'url(#mask)' }}>
                                 <g mixBlendMode="screen">
@@ -175,7 +163,7 @@ const GameView = createView('GameView', function (props) {
                                         ry="3.8299999"
                                         x="0"
                                         y="0"
-                                        fill="#6aa2fe"
+                                        fill="#1f2225"
                                     />
                                 </g>
                             </g>
@@ -211,7 +199,6 @@ const GameView = createView('GameView', function (props) {
                         fill="#fec278"
                         fillRule="evenodd"
                         stroke="none"
-                        id="path13"
                         d="m 336,33.014876 c 167.16417,0 302.98512,135.820854 302.98512,302.985114 C 638.98512,503.16416 503.16417,638.98512 336,638.98512 168.83573,638.98512 33.014878,504.47017 33.014878,337.3059 33.014878,168.83573 168.83573,33.014876 336,33.014876 z"
                         clipRule="evenodd"
                     />
