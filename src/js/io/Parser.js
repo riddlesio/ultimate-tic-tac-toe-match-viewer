@@ -25,17 +25,20 @@ function parseStates(data, settings) {
     const { margintop, marginleft }       = field.margins;
 
     // create initial empty board state
+    console.log(data.states);
     initialState = _.cloneDeep(data.states[0]);
     initialState.field = initialState.field.replace(/4|8/g, '0');
     initialState.player = -1;
-    initialState.move = -1;
+    initialState.round = -1;
     data.states.unshift(initialState);
 
     return _.map(data.states, function (state) {
 
         let i;
         let moves = {};
-        let { move, column, winner, field, illegalMove, player } = state;
+        let { round, column, winner, field, illegalMove, player } = state;
+        round++;
+        console.log(round);
 
         if (winner) {
             if (winner != 'none') {
@@ -45,15 +48,14 @@ function parseStates(data, settings) {
 
         for (i = 1; i <= 81; i++) {
             moves[i] = 'current';
-            if (i < move) {
+            if (i < round) {
                 moves[i] = 'past';
-            } else if (i > move) {
+            } else if (i > round) {
                 moves[i] = 'future';
             }
         }
-
         return {
-            move,
+            round,
             column,
             winner,
             illegalMove,
@@ -78,13 +80,13 @@ function parseStates(data, settings) {
                 })
                 .value(),
             moves: _.chain(moves)
-                .map(function (type, move) {
-                    var row     = Math.floor((move - 1) / 9),
-                        column  = (move - 1) % 9,
+                .map(function (type, round) {
+                    var row     = Math.floor((round - 1) / 9),
+                        column  = (round - 1) % 9,
                         x       = column * 35 + 130,
                         y       = row * 35 + 300;
 
-                    return { x, y, width, height, type, move };
+                    return { x, y, width, height, type, round };
                 })
                 .value(),
         };
