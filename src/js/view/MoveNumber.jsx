@@ -3,12 +3,12 @@ import createView from 'omniscient';
 
 const MoveNumber = createView(function (data) {
 
-    const { x, y, width, height, type, move } = data;
+    const { x, y, type, move } = data;
     const textX = x + 15;
     const textY = y + 20;
 
     return (
-        <g>
+        <g key={`${x}x${y}y`}>
             <use
                 x={ x }
                 y={ y }
