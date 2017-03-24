@@ -23,7 +23,6 @@ function parseStates(data, settings) {
     const field                           = settings.field;
     const { width, height, cellmargin }   = field.cell;
     const { margintop, marginleft }       = field.margins;
-
     // create initial empty board state
     initialState = _.cloneDeep(data.states[0]);
     initialState.field = initialState.field.replace(/4|8/g, '0');
@@ -40,7 +39,7 @@ function parseStates(data, settings) {
 
         if (winner) {
             if (winner != 'none') {
-                winner = settings.players.names[parseInt(winner.replace('player', '')) - 1];
+                winner = settings.players.names[parseInt(winner.replace('player', ''))];
             }
         }
 
