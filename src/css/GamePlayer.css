@@ -72,10 +72,6 @@ body {
 	height: 0;
 }
 
-.Dropdown {
-
-}
-
 .Dropdown-item {
 	padding-top: 1.0rem;
 	padding-bottom: 1.0rem;
@@ -90,14 +86,6 @@ body {
 .Dropdown-item.is-selected,
 .Dropdown.is-expanded .Dropdown-item {
 	height: auto;
-}
-
-.Dropdown-select {
-
-}
-
-.Dropdown-label {
-
 }
 
 .u-row {
